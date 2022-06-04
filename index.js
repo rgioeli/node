@@ -17,4 +17,4 @@ app.get("/api/test", (req, res) => {
     return res.send(data.map(x => x.price))
 })
 
-app.listen(8000, () => console.log("Let's challenge ourselves!"))
+app.listen(8000 || process.env.port, () => console.log("Let's challenge ourselves!"))
