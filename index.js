@@ -14,7 +14,6 @@ app.post("/api/customers", (req, res) => {
 
 app.get("/api/test", (req, res) => {
     const data = readOrderFile("./info.txt");
-    console.log(data)
     return res.send(data.map(x => x.price))
 })
 
