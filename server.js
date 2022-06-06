@@ -21,6 +21,6 @@ app.get("/api/test", (req, res) => {
   return res.send(data.map((x) => x.price));
 });
 
-app.listen(process.env.port || 8000, () =>
-  console.log("Let's challenge ourselves!")
-);
+const PORT = process.env.port || 3000;
+
+app.listen(PORT, () => console.log("Let's challenge ourselves!"));
