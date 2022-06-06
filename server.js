@@ -7,6 +7,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status(200).send("Welcome to the world's greatest server, ever.");
+});
+
 app.post("/api/customers", (req, res) => {
   console.log(req.body);
   return res.json(req.body);
